@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: 0.3s;
 }
 
 html {
@@ -31,6 +32,8 @@ body {
   height: 100%;
   display: flex;
   flex-direction: column;
+
+  @include apply-text($font-inter, 20px, 400, 140%, -0.5px);
 }
 
 h1 {
@@ -43,9 +46,37 @@ main {
 
 .container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1245px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+%btn {
+  border: 2px solid;
+  border-radius: 0.8rem;
+  padding: 2rem 2.4rem;
+
+  @include apply-text($font-martian, 1.8rem, 600, 130%, -1px);
+}
+
+.testimonials {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.testimonials__avatar {
+}
+.testimonials__content {
+}
+.testimonails__desc {
+  margin-top: 0.4rem;
+  color: var(--colors-neutral-700, #385159);
+  font-family: "Martian Mono";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  letter-spacing: -1px;
 }
